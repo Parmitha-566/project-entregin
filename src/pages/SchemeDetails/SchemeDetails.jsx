@@ -8,96 +8,111 @@ function SchemeDetails() {
 
   const content = {
     English: {
-      badge: "94% MATCH",
+      section: "Scheme details",
+      back: "Back to recommendations",
+      match: "94% match",
       title: "Entrepreneurship Support Scheme",
       subtitle:
-        "A potential match based on your requirements and profile.",
-      assistance: "Potential assistance",
-      amount: "₹1,50,000",
-      why: "Why this matches you",
-      reasons: [
-        "Your requirement is related to starting a business.",
-        "Your selected activity matches the supported business category.",
-        "Your requested funding is within the indicative assistance amount.",
-        "Your profile can be evaluated against the scheme's eligibility rules.",
+        "A potential financial assistance option for individuals looking to start or expand a small business.",
+      amount: "Up to ₹1,50,000",
+      amountLabel: "Potential assistance",
+      why: "Why this scheme matches",
+      whyText:
+        "Based on the information you provided, this scheme appears relevant to your business purpose, estimated requirement and profile.",
+      points: [
+        "Suitable for starting a small business",
+        "Potential assistance within your requested amount",
+        "Designed to support self-employment opportunities",
       ],
-      info: "Key information",
-      infoItems: [
-        ["Financial assistance", "Up to ₹1,50,000"],
-        ["Support type", "Low interest"],
-        ["Purpose", "Business establishment"],
-        ["Application route", "Authorized channel partner"],
-      ],
+      keyInfo: "Key information",
+      loan: "Potential assistance",
+      interest: "Interest",
+      interestValue: "Low interest",
+      contribution: "Applicant contribution",
+      contributionValue: "As applicable",
       eligibility: "Eligibility overview",
       eligibilityText:
-        "The scheme may have specific requirements related to income, applicant category, business activity, documentation and other conditions.",
-      note:
-        "This recommendation is based on the information provided. Final eligibility and approval are determined by the respective official scheme authority.",
+        "Eligibility depends on factors such as income, applicant category, business activity, location and the official scheme guidelines.",
+      important: "Important",
+      disclaimer:
+        "This recommendation is a demonstration based on mock data. Final eligibility, assistance amount and approval are determined by the official authority.",
+      partner: "Find the right channel partner",
+      partnerText:
+        "See which authorized partner may be most suitable based on scheme compatibility, location and availability.",
       calculator: "Calculate EMI",
       documents: "Check documents",
-      back: "← Back to schemes",
     },
 
     Hindi: {
-      badge: "94% मिलान",
+      section: "योजना विवरण",
+      back: "अनुशंसाओं पर वापस जाएं",
+      match: "94% मिलान",
       title: "उद्यमिता सहायता योजना",
       subtitle:
-        "आपकी आवश्यकताओं और प्रोफ़ाइल के आधार पर एक संभावित मिलान।",
-      assistance: "संभावित सहायता",
-      amount: "₹1,50,000",
-      why: "यह योजना आपके लिए क्यों उपयुक्त है",
-      reasons: [
-        "आपकी आवश्यकता व्यवसाय शुरू करने से संबंधित है।",
-        "आपकी चुनी गई गतिविधि समर्थित व्यवसाय श्रेणी से मेल खाती है।",
-        "आपकी मांगी गई राशि संभावित सहायता सीमा के भीतर है।",
-        "आपकी प्रोफ़ाइल का मूल्यांकन योजना की पात्रता नियमों के आधार पर किया जा सकता है।",
+        "छोटा व्यवसाय शुरू करने या बढ़ाने वाले लोगों के लिए संभावित वित्तीय सहायता विकल्प।",
+      amount: "₹1,50,000 तक",
+      amountLabel: "संभावित सहायता",
+      why: "यह योजना क्यों उपयुक्त है",
+      whyText:
+        "आपके द्वारा दी गई जानकारी के आधार पर यह योजना आपके व्यवसाय के उद्देश्य, अनुमानित आवश्यकता और प्रोफ़ाइल के लिए उपयुक्त दिखाई देती है।",
+      points: [
+        "छोटा व्यवसाय शुरू करने के लिए उपयुक्त",
+        "आपकी अनुरोधित राशि के भीतर संभावित सहायता",
+        "स्वरोजगार के अवसरों को समर्थन देने के लिए बनाई गई",
       ],
-      info: "मुख्य जानकारी",
-      infoItems: [
-        ["वित्तीय सहायता", "₹1,50,000 तक"],
-        ["सहायता का प्रकार", "कम ब्याज"],
-        ["उद्देश्य", "व्यवसाय शुरू करना"],
-        ["आवेदन का माध्यम", "अधिकृत चैनल पार्टनर"],
-      ],
+      keyInfo: "मुख्य जानकारी",
+      loan: "संभावित सहायता",
+      interest: "ब्याज",
+      interestValue: "कम ब्याज",
+      contribution: "आवेदक का योगदान",
+      contributionValue: "लागू नियमों के अनुसार",
       eligibility: "पात्रता का अवलोकन",
       eligibilityText:
-        "योजना में आय, आवेदक श्रेणी, व्यवसाय गतिविधि, दस्तावेज़ और अन्य शर्तों से संबंधित विशेष आवश्यकताएं हो सकती हैं।",
-      note:
-        "यह सिफारिश आपके द्वारा दी गई जानकारी पर आधारित है। अंतिम पात्रता और स्वीकृति संबंधित आधिकारिक योजना प्राधिकरण द्वारा निर्धारित की जाती है।",
+        "पात्रता आय, आवेदक की श्रेणी, व्यवसाय गतिविधि, स्थान और आधिकारिक योजना दिशानिर्देशों जैसे कारकों पर निर्भर करती है।",
+      important: "महत्वपूर्ण",
+      disclaimer:
+        "यह अनुशंसा मॉक डेटा पर आधारित प्रदर्शन के लिए है। अंतिम पात्रता, सहायता राशि और स्वीकृति संबंधित आधिकारिक प्राधिकरण द्वारा निर्धारित की जाती है।",
+      partner: "सही चैनल पार्टनर खोजें",
+      partnerText:
+        "योजना की अनुकूलता, स्थान और उपलब्धता के आधार पर सबसे उपयुक्त अधिकृत पार्टनर देखें।",
       calculator: "EMI की गणना करें",
       documents: "दस्तावेज़ जांचें",
-      back: "← योजनाओं पर वापस",
     },
 
     Kannada: {
-      badge: "94% ಹೊಂದಾಣಿಕೆ",
-      title: "ಉದ್ಯಮಶೀಲತಾ ಸಹಾಯ ಯೋಜನೆ",
+      section: "ಯೋಜನೆ ವಿವರಗಳು",
+      back: "ಶಿಫಾರಸುಗಳಿಗೆ ಹಿಂತಿರುಗಿ",
+      match: "94% ಹೊಂದಾಣಿಕೆ",
+      title: "ಉದ್ಯಮಿತ್ವ ಬೆಂಬಲ ಯೋಜನೆ",
       subtitle:
-        "ನಿಮ್ಮ ಅಗತ್ಯಗಳು ಮತ್ತು ಪ್ರೊಫೈಲ್ ಆಧಾರದ ಮೇಲೆ ಒಂದು ಸಾಧ್ಯವಾದ ಹೊಂದಾಣಿಕೆ.",
-      assistance: "ಸಂಭಾವ್ಯ ಸಹಾಯ",
-      amount: "₹1,50,000",
-      why: "ಈ ಯೋಜನೆ ನಿಮಗೆ ಏಕೆ ಸೂಕ್ತವಾಗಿದೆ",
-      reasons: [
-        "ನಿಮ್ಮ ಅಗತ್ಯವು ವ್ಯವಹಾರ ಪ್ರಾರಂಭಿಸುವುದಕ್ಕೆ ಸಂಬಂಧಿಸಿದೆ.",
-        "ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ಚಟುವಟಿಕೆಯು ಬೆಂಬಲಿತ ವ್ಯವಹಾರ ವರ್ಗಕ್ಕೆ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆ.",
-        "ನೀವು ಕೇಳಿರುವ ಹಣಕಾಸಿನ ಮೊತ್ತವು ಸೂಚಿಸಲಾದ ಸಹಾಯದ ಮಿತಿಯೊಳಗಿದೆ.",
-        "ಯೋಜನೆಯ ಅರ್ಹತಾ ನಿಯಮಗಳ ಆಧಾರದ ಮೇಲೆ ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡಬಹುದು.",
+        "ಸಣ್ಣ ವ್ಯವಹಾರವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಅಥವಾ ವಿಸ್ತರಿಸಲು ಬಯಸುವವರಿಗೆ ಸಂಭಾವ್ಯ ಹಣಕಾಸು ಸಹಾಯದ ಆಯ್ಕೆ.",
+      amount: "₹1,50,000 ವರೆಗೆ",
+      amountLabel: "ಸಂಭಾವ್ಯ ಸಹಾಯ",
+      why: "ಈ ಯೋಜನೆ ಏಕೆ ಹೊಂದಿಕೆಯಾಗುತ್ತದೆ",
+      whyText:
+        "ನೀವು ನೀಡಿದ ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ, ಈ ಯೋಜನೆಯು ನಿಮ್ಮ ವ್ಯವಹಾರದ ಉದ್ದೇಶ, ಅಂದಾಜು ಅಗತ್ಯ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗೆ ಸೂಕ್ತವಾಗಿ ಕಾಣುತ್ತದೆ.",
+      points: [
+        "ಸಣ್ಣ ವ್ಯವಹಾರ ಪ್ರಾರಂಭಿಸಲು ಸೂಕ್ತ",
+        "ನೀವು ಕೇಳಿದ ಮೊತ್ತದೊಳಗೆ ಸಂಭಾವ್ಯ ಸಹಾಯ",
+        "ಸ್ವಯಂ ಉದ್ಯೋಗದ ಅವಕಾಶಗಳನ್ನು ಬೆಂಬಲಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ",
       ],
-      info: "ಪ್ರಮುಖ ಮಾಹಿತಿ",
-      infoItems: [
-        ["ಹಣಕಾಸಿನ ಸಹಾಯ", "₹1,50,000 ವರೆಗೆ"],
-        ["ಸಹಾಯದ ವಿಧ", "ಕಡಿಮೆ ಬಡ್ಡಿ"],
-        ["ಉದ್ದೇಶ", "ವ್ಯವಹಾರ ಪ್ರಾರಂಭ"],
-        ["ಅರ್ಜಿ ಮಾರ್ಗ", "ಅಧಿಕೃತ ಚಾನೆಲ್ ಪಾಲುದಾರ"],
-      ],
+      keyInfo: "ಮುಖ್ಯ ಮಾಹಿತಿ",
+      loan: "ಸಂಭಾವ್ಯ ಸಹಾಯ",
+      interest: "ಬಡ್ಡಿ",
+      interestValue: "ಕಡಿಮೆ ಬಡ್ಡಿ",
+      contribution: "ಅರ್ಜಿದಾರರ ಕೊಡುಗೆ",
+      contributionValue: "ಅನ್ವಯಿಸುವ ನಿಯಮಗಳಂತೆ",
       eligibility: "ಅರ್ಹತೆಯ ಅವಲೋಕನ",
       eligibilityText:
-        "ಈ ಯೋಜನೆಯು ಆದಾಯ, ಅರ್ಜಿದಾರರ ವರ್ಗ, ವ್ಯವಹಾರ ಚಟುವಟಿಕೆ, ದಾಖಲೆಗಳು ಮತ್ತು ಇತರ ಷರತ್ತುಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ನಿರ್ದಿಷ್ಟ ಅವಶ್ಯಕತೆಗಳನ್ನು ಹೊಂದಿರಬಹುದು.",
-      note:
-        "ಈ ಶಿಫಾರಸು ನೀವು ನೀಡಿದ ಮಾಹಿತಿಯನ್ನು ಆಧರಿಸಿದೆ. ಅಂತಿಮ ಅರ್ಹತೆ ಮತ್ತು ಅನುಮೋದನೆಯನ್ನು ಸಂಬಂಧಿತ ಅಧಿಕೃತ ಯೋಜನಾ ಪ್ರಾಧಿಕಾರ ನಿರ್ಧರಿಸುತ್ತದೆ.",
+        "ಅರ್ಹತೆಯು ಆದಾಯ, ಅರ್ಜಿದಾರರ ವರ್ಗ, ವ್ಯವಹಾರ ಚಟುವಟಿಕೆ, ಸ್ಥಳ ಮತ್ತು ಅಧಿಕೃತ ಯೋಜನೆಯ ಮಾರ್ಗಸೂಚಿಗಳಂತಹ ಅಂಶಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುತ್ತದೆ.",
+      important: "ಮುಖ್ಯ",
+      disclaimer:
+        "ಈ ಶಿಫಾರಸು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾಕ್ ಡೇಟಾವನ್ನು ಆಧರಿಸಿದೆ. ಅಂತಿಮ ಅರ್ಹತೆ, ಸಹಾಯದ ಮೊತ್ತ ಮತ್ತು ಅನುಮೋದನೆಯನ್ನು ಅಧಿಕೃತ ಸಂಸ್ಥೆಯೇ ನಿರ್ಧರಿಸುತ್ತದೆ.",
+      partner: "ಸರಿಯಾದ ಚಾನೆಲ್ ಪಾಲುದಾರರನ್ನು ಹುಡುಕಿ",
+      partnerText:
+        "ಯೋಜನೆಯ ಹೊಂದಾಣಿಕೆ, ಸ್ಥಳ ಮತ್ತು ಲಭ್ಯತೆಯ ಆಧಾರದ ಮೇಲೆ ಸೂಕ್ತ ಅಧಿಕೃತ ಪಾಲುದಾರರನ್ನು ನೋಡಿ.",
       calculator: "EMI ಲೆಕ್ಕ ಹಾಕಿ",
       documents: "ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
-      back: "← ಯೋಜನೆಗಳಿಗೆ ಹಿಂತಿರುಗಿ",
     },
   };
 
@@ -111,6 +126,7 @@ function SchemeDetails() {
         <div className="mx-auto flex max-w-7xl items-center px-6 py-4">
 
           <div className="flex items-center gap-3">
+
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-[#0b2a5b] text-lg font-bold text-white shadow-md">
               E
               <span className="absolute bottom-0 left-0 h-1 w-full bg-blue-400" />
@@ -122,126 +138,210 @@ function SchemeDetails() {
               </h1>
 
               <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                {text.why}
+                {text.section}
               </p>
             </div>
+
           </div>
 
         </div>
       </header>
 
 
-      {/* MAIN */}
       <main className="px-6 py-12 md:py-16">
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
 
           {/* BACK */}
           <button
             onClick={() => navigate("/recommendations")}
-            className="mb-8 text-sm font-semibold text-slate-500 hover:text-blue-700"
+            className="text-sm font-bold text-slate-500 hover:text-blue-700"
           >
-            {text.back}
+            ← {text.back}
           </button>
 
 
           {/* HERO */}
-          <div className="rounded-[2rem] bg-[#061a3b] p-7 text-white shadow-xl md:p-10">
+          <section className="mt-8 overflow-hidden rounded-[2rem] bg-[#061a3b] text-white shadow-xl">
 
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div className="grid lg:grid-cols-[1fr_300px]">
 
-              <div>
+              <div className="p-8 md:p-10">
 
-                <span className="inline-flex rounded-full bg-emerald-400/15 px-4 py-2 text-xs font-extrabold tracking-[0.15em] text-emerald-300">
-                  {text.badge}
-                </span>
+                <div className="flex flex-wrap items-center gap-3">
 
-                <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-4xl">
+                  <span className="rounded-full bg-emerald-400/15 px-4 py-2 text-xs font-bold text-emerald-300">
+                    {text.match}
+                  </span>
+
+                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-blue-100">
+                    Government assistance
+                  </span>
+
+                </div>
+
+                <h2 className="mt-6 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
                   {text.title}
                 </h2>
 
-                <p className="mt-4 max-w-2xl text-base leading-7 text-blue-100/70">
+                <p className="mt-5 max-w-2xl text-base leading-7 text-blue-100/70 md:text-lg">
                   {text.subtitle}
                 </p>
 
               </div>
 
 
-              <div className="shrink-0 rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <div className="flex items-center justify-center border-t border-white/10 bg-white/5 p-8 lg:border-l lg:border-t-0">
 
-                <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-200/60">
-                  {text.assistance}
-                </p>
+                <div className="text-center">
 
-                <p className="mt-2 text-3xl font-extrabold">
-                  {text.amount}
-                </p>
+                  <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-200/50">
+                    {text.amountLabel}
+                  </p>
 
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* WHY MATCH */}
-          <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
-
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
-              {text.why}
-            </p>
-
-            <div className="mt-6 space-y-4">
-
-              {text.reasons.map((reason) => (
-
-                <div
-                  key={reason}
-                  className="flex items-start gap-4 rounded-2xl bg-slate-50 p-4"
-                >
-
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-50 font-bold text-emerald-600">
-                    ✓
-                  </div>
-
-                  <p className="text-sm leading-6 text-slate-600">
-                    {reason}
+                  <p className="mt-3 text-4xl font-extrabold">
+                    {text.amount}
                   </p>
 
                 </div>
 
-              ))}
+              </div>
 
             </div>
 
           </section>
 
 
-          {/* KEY INFORMATION */}
-          <section className="mt-8">
+          {/* WHY MATCH */}
+          <section className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
 
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
-              {text.info}
-            </p>
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
 
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+                {text.why}
+              </p>
 
-              {text.infoItems.map(([label, value]) => (
+              <h3 className="mt-3 text-2xl font-extrabold">
+                A potential fit for your requirement
+              </h3>
 
-                <div
-                  key={label}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-                >
-                  <p className="text-sm font-semibold text-slate-400">
-                    {label}
-                  </p>
+              <p className="mt-4 text-sm leading-7 text-slate-500">
+                {text.whyText}
+              </p>
 
-                  <p className="mt-2 font-extrabold text-slate-900">
-                    {value}
-                  </p>
+              <div className="mt-7 space-y-4">
+
+                {text.points.map((point, index) => (
+
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 rounded-2xl bg-slate-50 p-4"
+                  >
+
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-sm font-bold text-emerald-700">
+                      ✓
+                    </div>
+
+                    <p className="pt-1 text-sm font-semibold text-slate-700">
+                      {point}
+                    </p>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+
+            {/* MATCH SCORE */}
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
+
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+                Match confidence
+              </p>
+
+              <div className="mt-7 flex items-center justify-center">
+
+                <div className="flex h-44 w-44 items-center justify-center rounded-full border-[12px] border-blue-100">
+
+                  <div className="text-center">
+
+                    <p className="text-5xl font-extrabold text-[#061a3b]">
+                      94%
+                    </p>
+
+                    <p className="mt-1 text-xs font-semibold text-slate-400">
+                      potential match
+                    </p>
+
+                  </div>
+
                 </div>
 
-              ))}
+              </div>
+
+              <div className="mt-7 rounded-2xl bg-blue-50 p-4">
+
+                <p className="text-sm font-semibold leading-6 text-blue-900">
+                  The recommendation is based on your submitted requirements
+                  and the mock scheme rules used in this demonstration.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* KEY INFO */}
+          <section className="mt-10">
+
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+              {text.keyInfo}
+            </p>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-3">
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+                <p className="text-xs font-semibold text-slate-400">
+                  {text.loan}
+                </p>
+
+                <p className="mt-3 text-xl font-extrabold text-slate-900">
+                  ₹1,50,000
+                </p>
+
+              </div>
+
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+                <p className="text-xs font-semibold text-slate-400">
+                  {text.interest}
+                </p>
+
+                <p className="mt-3 text-xl font-extrabold text-slate-900">
+                  {text.interestValue}
+                </p>
+
+              </div>
+
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+                <p className="text-xs font-semibold text-slate-400">
+                  {text.contribution}
+                </p>
+
+                <p className="mt-3 text-xl font-extrabold text-slate-900">
+                  {text.contributionValue}
+                </p>
+
+              </div>
 
             </div>
 
@@ -249,45 +349,104 @@ function SchemeDetails() {
 
 
           {/* ELIGIBILITY */}
-          <section className="mt-8 rounded-3xl border border-blue-100 bg-blue-50/60 p-7 md:p-8">
+          <section className="mt-10 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
 
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
               {text.eligibility}
             </p>
 
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">
+            <h3 className="mt-3 text-2xl font-extrabold">
+              Check the official requirements
+            </h3>
+
+            <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-500">
               {text.eligibilityText}
             </p>
 
           </section>
 
 
-          {/* DISCLAIMER */}
-          <div className="mt-7 rounded-2xl border border-amber-100 bg-amber-50 p-5">
+          {/* PARTNER CTA */}
+          <section className="mt-10 overflow-hidden rounded-3xl bg-[#061a3b] p-7 text-white shadow-xl md:p-9">
 
-            <p className="text-sm leading-6 text-amber-800">
-              <strong>Important:</strong> {text.note}
-            </p>
+            <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+
+              <div className="max-w-2xl">
+
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
+                  Partner matching
+                </p>
+
+                <h3 className="mt-3 text-2xl font-extrabold md:text-3xl">
+                  {text.partner}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-blue-100/65">
+                  {text.partnerText}
+                </p>
+
+              </div>
+
+
+              <button
+                onClick={() => navigate("/partners")}
+                className="shrink-0 rounded-xl bg-white px-6 py-4 font-bold text-[#061a3b] shadow-lg hover:-translate-y-1 hover:bg-blue-50"
+              >
+                {text.partner} →
+              </button>
+
+            </div>
+
+          </section>
+
+
+          {/* OTHER ACTIONS */}
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+
+            <button
+              onClick={() => navigate("/partners")}
+              className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+            >
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-700">
+                Financial planning
+              </p>
+
+              <p className="mt-2 text-lg font-extrabold">
+                {text.calculator} →
+              </p>
+
+              <p className="mt-1 text-sm text-slate-500">
+                Estimate your potential monthly repayment.
+              </p>
+            </button>
+
+
+            <button
+              onClick={() => navigate("/documents")}
+              className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+            >
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-700">
+                Application readiness
+              </p>
+
+              <p className="mt-2 text-lg font-extrabold">
+                {text.documents} →
+              </p>
+
+              <p className="mt-1 text-sm text-slate-500">
+                Review the documents you may need.
+              </p>
+            </button>
 
           </div>
 
 
-          {/* ACTIONS */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          {/* DISCLAIMER */}
+          <div className="mt-7 rounded-2xl border border-amber-100 bg-amber-50 p-5">
 
-            <button
-              onClick={() => navigate("/calculator")}
-              className="flex-1 rounded-xl bg-[#0b2a5b] px-6 py-4 font-bold text-white shadow-lg hover:-translate-y-1 hover:bg-blue-800"
-            >
-              {text.calculator} →
-            </button>
-
-            <button
-              onClick={() => navigate("/documents")}
-              className="flex-1 rounded-xl border border-slate-200 bg-white px-6 py-4 font-bold text-slate-700 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-800"
-            >
-              {text.documents} →
-            </button>
+            <p className="text-sm leading-6 text-amber-800">
+              <strong>{text.important}:</strong> {text.disclaimer}
+            </p>
 
           </div>
 

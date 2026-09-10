@@ -172,15 +172,15 @@ function Questionnaire() {
   const text = content[language] || content.English;
 
   const updateField = (field, value) => {
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [field]: value,
-    });
+    }));
   };
 
   const nextStep = () => {
     if (step < 5) {
-      setStep(step + 1);
+      setStep((prev) => prev + 1);
     } else {
       localStorage.setItem(
         "entreginProfile",
@@ -193,7 +193,7 @@ function Questionnaire() {
 
   const previousStep = () => {
     if (step > 1) {
-      setStep(step - 1);
+      setStep((prev) => prev - 1);
     }
   };
 
@@ -256,8 +256,14 @@ function Questionnaire() {
           </div>
 
 
-          {/* QUESTION CARD */}
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl md:p-10">
+          {/* QUESTION FORM */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              nextStep();
+            }}
+            className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl md:p-10"
+          >
 
             {/* STEP 1 & 2 */}
             {step <= 2 && (
@@ -279,6 +285,7 @@ function Questionnaire() {
 
                     return (
                       <button
+                        type="button"
                         key={option}
                         onClick={() =>
                           updateField(field, option)
@@ -415,6 +422,7 @@ function Questionnaire() {
             <div className="mt-10 flex items-center justify-between border-t border-slate-100 pt-7">
 
               <button
+                type="button"
                 onClick={previousStep}
                 disabled={step === 1}
                 className="rounded-xl border border-slate-200 px-5 py-3 font-semibold text-slate-600 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-30"
@@ -423,7 +431,7 @@ function Questionnaire() {
               </button>
 
               <button
-                onClick={nextStep}
+                type="submit"
                 className="group rounded-xl bg-[#0b2a5b] px-6 py-3.5 font-bold text-white shadow-lg shadow-blue-950/10 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl"
               >
                 {step === 5 ? text.finish : text.continue}
@@ -435,7 +443,7 @@ function Questionnaire() {
 
             </div>
 
-          </div>
+          </form>
 
         </div>
 
