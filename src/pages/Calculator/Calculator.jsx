@@ -4,100 +4,166 @@ import { useNavigate } from "react-router-dom";
 function Calculator() {
   const navigate = useNavigate();
 
+  const language =
+    localStorage.getItem("entreginLanguage") || "English";
+
   const [amount, setAmount] = useState(120000);
   const [interest, setInterest] = useState(7);
   const [tenure, setTenure] = useState(36);
 
   const monthlyRate = interest / 12 / 100;
+
   const emi =
     monthlyRate === 0
       ? amount / tenure
-      : (amount *
-          monthlyRate *
-          Math.pow(1 + monthlyRate, tenure)) /
+      : (amount * monthlyRate * Math.pow(1 + monthlyRate, tenure)) /
         (Math.pow(1 + monthlyRate, tenure) - 1);
 
   const totalPayment = emi * tenure;
   const totalInterest = totalPayment - amount;
 
+  const content = {
+    English: {
+      section: "Financial simulator",
+      title: "Plan your repayment.",
+      subtitle:
+        "Adjust the loan amount, interest rate and tenure to understand your estimated EMI.",
+      amount: "Loan amount",
+      interest: "Interest rate",
+      tenure: "Loan tenure",
+      months: "months",
+      monthlyEmi: "Estimated monthly EMI",
+      principal: "Principal amount",
+      totalInterest: "Total interest",
+      totalRepayment: "Total repayment",
+      next: "Check document readiness",
+      note:
+        "This calculator provides an estimate for demonstration. Actual loan terms, interest rates and repayment schedules may vary.",
+      back: "← Back to scheme",
+    },
+
+    Hindi: {
+      section: "वित्तीय सिम्युलेटर",
+      title: "अपनी भुगतान योजना बनाएं।",
+      subtitle:
+        "अनुमानित EMI समझने के लिए ऋण राशि, ब्याज दर और अवधि को बदलें।",
+      amount: "ऋण राशि",
+      interest: "ब्याज दर",
+      tenure: "ऋण अवधि",
+      months: "महीने",
+      monthlyEmi: "अनुमानित मासिक EMI",
+      principal: "मूल राशि",
+      totalInterest: "कुल ब्याज",
+      totalRepayment: "कुल भुगतान",
+      next: "दस्तावेज़ की तैयारी जांचें",
+      note:
+        "यह कैलकुलेटर केवल प्रदर्शन के लिए अनुमान देता है। वास्तविक ऋण शर्तें, ब्याज दरें और भुगतान अलग हो सकते हैं।",
+      back: "← योजना पर वापस",
+    },
+
+    Kannada: {
+      section: "ಹಣಕಾಸು ಸಿಮ್ಯುಲೇಟರ್",
+      title: "ನಿಮ್ಮ ಮರುಪಾವತಿಯನ್ನು ಯೋಜಿಸಿ.",
+      subtitle:
+        "ಅಂದಾಜು EMI ತಿಳಿಯಲು ಸಾಲದ ಮೊತ್ತ, ಬಡ್ಡಿದರ ಮತ್ತು ಅವಧಿಯನ್ನು ಹೊಂದಿಸಿ.",
+      amount: "ಸಾಲದ ಮೊತ್ತ",
+      interest: "ಬಡ್ಡಿದರ",
+      tenure: "ಸಾಲದ ಅವಧಿ",
+      months: "ತಿಂಗಳುಗಳು",
+      monthlyEmi: "ಅಂದಾಜು ಮಾಸಿಕ EMI",
+      principal: "ಮೂಲ ಮೊತ್ತ",
+      totalInterest: "ಒಟ್ಟು ಬಡ್ಡಿ",
+      totalRepayment: "ಒಟ್ಟು ಮರುಪಾವತಿ",
+      next: "ದಾಖಲೆಗಳ ಸಿದ್ಧತೆ ಪರಿಶೀಲಿಸಿ",
+      note:
+        "ಈ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಅಂದಾಜು ನೀಡುತ್ತದೆ. ನಿಜವಾದ ಸಾಲದ ನಿಯಮಗಳು, ಬಡ್ಡಿದರಗಳು ಮತ್ತು ಮರುಪಾವತಿ ಬದಲಾಗಬಹುದು.",
+      back: "← ಯೋಜನೆಗೆ ಹಿಂತಿರುಗಿ",
+    },
+  };
+
+  const text = content[language] || content.English;
+
   const formatCurrency = (value) =>
     `₹${Math.round(value).toLocaleString("en-IN")}`;
 
   return (
-    <div className="min-h-screen bg-[#f7f9fc] text-slate-900">
+    <div className="min-h-screen bg-slate-50 text-slate-900">
 
-      {/* Header */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+      {/* HEADER */}
+      <header className="border-b border-slate-200/80 bg-white">
+        <div className="mx-auto flex max-w-7xl items-center px-6 py-4">
 
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-900 font-bold text-white">
+
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-[#0b2a5b] text-lg font-bold text-white shadow-md">
               E
+              <span className="absolute bottom-0 left-0 h-1 w-full bg-blue-400" />
             </div>
 
             <div>
-              <h1 className="font-bold text-blue-950">
+              <h1 className="text-xl font-extrabold tracking-tight text-[#0b2a5b]">
                 ENTREGIN
               </h1>
 
-              <p className="text-[10px] uppercase tracking-[0.15em] text-slate-500">
-                Financial Simulator
+              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+                {text.section}
               </p>
             </div>
-          </div>
 
-          <button
-            onClick={() => navigate("/scheme-details")}
-            className="text-sm font-medium text-slate-500 hover:text-blue-800"
-          >
-            ← Back
-          </button>
+          </div>
 
         </div>
       </header>
 
-      {/* Main */}
-      <main className="px-6 py-12">
+
+      {/* MAIN */}
+      <main className="px-6 py-12 md:py-16">
 
         <div className="mx-auto max-w-5xl">
 
-          {/* Heading */}
+          {/* BACK */}
+          <button
+            onClick={() => navigate("/scheme-details")}
+            className="mb-8 text-sm font-semibold text-slate-500 hover:text-blue-700"
+          >
+            {text.back}
+          </button>
+
+
+          {/* HEADING */}
           <div className="max-w-3xl">
 
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-700">
-              Financial simulation
-            </p>
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-blue-700">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              {text.section}
+            </div>
 
-            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
-              Plan your repayment.
+            <h2 className="mt-5 text-4xl font-extrabold tracking-tight md:text-5xl">
+              {text.title}
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-500">
-              Adjust the loan amount, interest rate and repayment
-              period to understand your estimated monthly EMI.
+              {text.subtitle}
             </p>
 
           </div>
 
-          {/* Calculator */}
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
 
-            {/* Inputs */}
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+          {/* CALCULATOR */}
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.85fr]">
 
-              <h3 className="text-xl font-bold">
-                Loan details
-              </h3>
+            {/* INPUT CARD */}
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-8">
 
-              {/* Amount */}
-              <div className="mt-8">
+              {/* AMOUNT */}
+              <div>
 
                 <div className="flex items-center justify-between">
-                  <label className="font-semibold">
-                    Loan amount
+                  <label className="text-sm font-bold text-slate-700">
+                    {text.amount}
                   </label>
 
-                  <span className="font-bold text-blue-800">
+                  <span className="font-extrabold text-blue-800">
                     {formatCurrency(amount)}
                   </span>
                 </div>
@@ -119,15 +185,16 @@ function Calculator() {
 
               </div>
 
-              {/* Interest */}
-              <div className="mt-8">
+
+              {/* INTEREST */}
+              <div className="mt-9">
 
                 <div className="flex items-center justify-between">
-                  <label className="font-semibold">
-                    Interest rate
+                  <label className="text-sm font-bold text-slate-700">
+                    {text.interest}
                   </label>
 
-                  <span className="font-bold text-blue-800">
+                  <span className="font-extrabold text-blue-800">
                     {interest}%
                   </span>
                 </div>
@@ -149,16 +216,17 @@ function Calculator() {
 
               </div>
 
-              {/* Tenure */}
-              <div className="mt-8">
+
+              {/* TENURE */}
+              <div className="mt-9">
 
                 <div className="flex items-center justify-between">
-                  <label className="font-semibold">
-                    Repayment period
+                  <label className="text-sm font-bold text-slate-700">
+                    {text.tenure}
                   </label>
 
-                  <span className="font-bold text-blue-800">
-                    {tenure} months
+                  <span className="font-extrabold text-blue-800">
+                    {tenure} {text.months}
                   </span>
                 </div>
 
@@ -173,106 +241,82 @@ function Calculator() {
                 />
 
                 <div className="mt-2 flex justify-between text-xs text-slate-400">
-                  <span>6 months</span>
-                  <span>84 months</span>
+                  <span>6 {text.months}</span>
+                  <span>84 {text.months}</span>
                 </div>
 
               </div>
 
             </div>
 
-            {/* Result */}
-            <div className="rounded-[2rem] bg-blue-950 p-8 text-white shadow-xl">
 
-              <p className="text-sm font-semibold uppercase tracking-wider text-blue-200">
-                Estimated repayment
+            {/* RESULT CARD */}
+            <div className="rounded-[2rem] bg-[#061a3b] p-7 text-white shadow-xl md:p-8">
+
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
+                {text.monthlyEmi}
               </p>
 
-              <div className="mt-8">
+              <p className="mt-4 text-4xl font-extrabold tracking-tight">
+                {formatCurrency(emi)}
+              </p>
 
-                <p className="text-sm text-blue-200">
-                  Monthly EMI
-                </p>
 
-                <p className="mt-2 text-5xl font-bold">
-                  {formatCurrency(emi)}
-                </p>
+              {/* SUMMARY */}
+              <div className="mt-8 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.04]">
 
-                <p className="mt-3 text-sm text-blue-200">
-                  Approximate monthly payment
-                </p>
-
-              </div>
-
-              <div className="mt-10 space-y-4">
-
-                <div className="flex justify-between border-b border-white/10 pb-4">
-                  <span className="text-blue-200">
-                    Principal amount
+                <div className="flex items-center justify-between p-4">
+                  <span className="text-sm text-blue-100/60">
+                    {text.principal}
                   </span>
 
-                  <span className="font-semibold">
+                  <span className="font-bold">
                     {formatCurrency(amount)}
                   </span>
                 </div>
 
-                <div className="flex justify-between border-b border-white/10 pb-4">
-                  <span className="text-blue-200">
-                    Total interest
+                <div className="flex items-center justify-between p-4">
+                  <span className="text-sm text-blue-100/60">
+                    {text.totalInterest}
                   </span>
 
-                  <span className="font-semibold">
+                  <span className="font-bold">
                     {formatCurrency(totalInterest)}
                   </span>
                 </div>
 
-                <div className="flex justify-between">
-                  <span className="text-blue-200">
-                    Total repayment
+                <div className="flex items-center justify-between p-4">
+                  <span className="text-sm text-blue-100/60">
+                    {text.totalRepayment}
                   </span>
 
-                  <span className="font-semibold">
+                  <span className="font-bold">
                     {formatCurrency(totalPayment)}
                   </span>
                 </div>
 
               </div>
 
-              <div className="mt-10 rounded-2xl bg-white/10 p-5">
-                <p className="text-sm leading-6 text-blue-100">
-                  This is an estimate for planning purposes.
-                  Actual repayment may vary based on the final
-                  scheme terms and lending partner.
-                </p>
-              </div>
+
+              {/* CTA */}
+              <button
+                onClick={() => navigate("/documents")}
+                className="mt-7 w-full rounded-xl bg-white px-6 py-4 font-bold text-[#061a3b] shadow-lg hover:-translate-y-1 hover:bg-blue-50"
+              >
+                {text.next} →
+              </button>
 
             </div>
 
           </div>
 
-          {/* Next step */}
-          <div className="mt-8 flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-7 md:flex-row md:items-center md:justify-between">
 
-            <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-blue-700">
-                Next step
-              </p>
+          {/* DISCLAIMER */}
+          <div className="mt-7 rounded-2xl border border-amber-100 bg-amber-50 p-5">
 
-              <h3 className="mt-2 text-xl font-bold">
-                Check what documents you may need.
-              </h3>
-
-              <p className="mt-2 text-sm text-slate-500">
-                Prepare the required documents before applying.
-              </p>
-            </div>
-
-            <button
-              onClick={() => navigate("/documents")}
-              className="rounded-xl bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
-            >
-              Check documents →
-            </button>
+            <p className="text-sm leading-6 text-amber-800">
+              <strong>Note:</strong> {text.note}
+            </p>
 
           </div>
 
