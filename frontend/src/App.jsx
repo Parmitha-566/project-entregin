@@ -3,6 +3,14 @@ import { useEffect } from "react";
 import { getDashboardStats } from "./api/adminApi";
 import { useState } from "react";
 import {
+  FaHome,
+  FaUsers,
+  FaFileAlt,
+  FaChartBar,
+  FaMapMarkedAlt,
+  FaUserShield
+} from "react-icons/fa";
+import {
   BarChart,
   Bar,
   XAxis,
@@ -104,11 +112,11 @@ const [categoryFilter, setCategoryFilter] = useState("All");
   </button>
 
   <button
-    className={activePage === "Settings" ? "active" : ""}
-    onClick={() => setActivePage("Settings")}
-  >
-    Settings
-  </button>
+  className={activePage === "Settings" ? "active" : ""}
+  onClick={() => setActivePage("Settings")}
+>
+  <FaUserShield /> Settings
+</button>
 </nav>
       </aside>
 
@@ -556,29 +564,69 @@ const [categoryFilter, setCategoryFilter] = useState("All");
 
 {activePage === "Settings" && (
   <section className="panel">
-    <h2>Settings</h2>
 
-    <div className="settings-container">
+    <h2>Admin Settings</h2>
+
+    <div className="stats-grid">
+
       <div className="stat-card">
-        <h3>Profile</h3>
-        <p>Admin</p>
+        <h3>Admin Profile</h3>
+        <p>Name: System Administrator</p>
+        <p>Email: admin@entregin.gov</p>
+        <p>Role: Super Admin</p>
       </div>
 
       <div className="stat-card">
         <h3>Notifications</h3>
-        <p>Enabled</p>
+        <p>Email Alerts: Enabled</p>
+        <p>Application Updates: Enabled</p>
+        <p>System Alerts: Enabled</p>
       </div>
 
       <div className="stat-card">
-        <h3>Theme</h3>
-        <p>Dark Mode</p>
+        <h3>System Information</h3>
+        <p>Version: 1.0.0</p>
+        <p>Status: Online</p>
+        <p>Database: Connected</p>
       </div>
 
       <div className="stat-card">
         <h3>Security</h3>
-        <p>Password Protected</p>
+        <p>Two-Factor Auth: Enabled</p>
+        <p>Last Login: Today</p>
+        <p>Password Status: Secure</p>
       </div>
+
     </div>
+
+    <div className="panel" style={{ marginTop: "20px" }}>
+      <h3>Platform Overview</h3>
+
+      <table className="beneficiary-table">
+        <tbody>
+          <tr>
+            <td>Total Beneficiaries</td>
+            <td>{dashboardData.totalBeneficiaries}</td>
+          </tr>
+
+          <tr>
+            <td>Total Schemes</td>
+            <td>{governmentSchemes.length}</td>
+          </tr>
+
+          <tr>
+            <td>Active Partners</td>
+            <td>{dashboardData.activePartners}</td>
+          </tr>
+
+          <tr>
+            <td>Total Applications</td>
+            <td>{dashboardData.totalApplications}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </section>
 )}
 
