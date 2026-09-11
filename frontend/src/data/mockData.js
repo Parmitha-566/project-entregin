@@ -1,8 +1,8 @@
 export const dashboardData = {
   totalBeneficiaries: 1250,
-  totalRecommendations: 980,
-  routedUsers: 870,
+  totalSchemes: 25,
   activePartners: 40,
+  totalApplications: 560,
 };
 
 export const schemeDemand = [
@@ -14,13 +14,42 @@ export const schemeDemand = [
   { month: "Jun", value: 280 },
 ];
 
-export const recommendationTrend = [
-  { month: "Jan", value: 80 },
-  { month: "Feb", value: 100 },
-  { month: "Mar", value: 140 },
-  { month: "Apr", value: 180 },
-  { month: "May", value: 200 },
-  { month: "Jun", value: 230 },
+export const governmentSchemes = [
+  {
+    id: "SCH001",
+    name: "PM-KISAN",
+    category: "Agriculture",
+    beneficiaries: "Farmers",
+    status: "Active",
+  },
+  {
+    id: "SCH002",
+    name: "Ayushman Bharat",
+    category: "Healthcare",
+    beneficiaries: "Low Income Families",
+    status: "Active",
+  },
+  {
+    id: "SCH003",
+    name: "PMAY",
+    category: "Housing",
+    beneficiaries: "Urban & Rural Poor",
+    status: "Active",
+  },
+  {
+    id: "SCH004",
+    name: "PM Ujjwala Yojana",
+    category: "LPG Support",
+    beneficiaries: "Women",
+    status: "Active",
+  },
+  {
+    id: "SCH005",
+    name: "PM SVANidhi",
+    category: "Street Vendors",
+    beneficiaries: "Small Businesses",
+    status: "Active",
+  },
 ];
 
 export const partnerPerformance = [
@@ -35,4 +64,13 @@ export const geographicDemand = [
   { state: "Tamil Nadu", users: 185 },
   { state: "Kerala", users: 145 },
   { state: "Maharashtra", users: 270 },
+];
+
+export const recommendationTrend = [
+  { month: "Jan", value: 80 },
+  { month: "Feb", value: 100 },
+  { month: "Mar", value: 140 },
+  { month: "Apr", value: 180 },
+  { month: "May", value: 200 },
+  { month: "Jun", value: 230 },
 ];
