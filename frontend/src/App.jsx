@@ -20,6 +20,7 @@ import {
   recommendationTrend,
   partnerPerformance,
   geographicDemand,
+  governmentSchemes,
 } from "./data/mockData";
 const beneficiaryData = [
   { month: "Jan", beneficiaries: 180 },
@@ -47,7 +48,9 @@ function App() {
             console.log(err);
         });
 }, []);
-  const [activePage, setActivePage] = useState("Dashboard");
+ const [activePage, setActivePage] = useState("Dashboard");
+const [searchTerm, setSearchTerm] = useState("");
+const [categoryFilter, setCategoryFilter] = useState("All");
 
   return (
     <div className="dashboard">
@@ -129,25 +132,25 @@ function App() {
 
           <div className="stat-card">
             <p>Total Beneficiaries</p>
-            <h2>1,250</h2>
+           <h2>{dashboardData.totalBeneficiaries}</h2>
             <span>+12% this month</span>
           </div>
 
           <div className="stat-card">
             <p>Total Schemes</p>
-            <h2>25</h2>
+            <h2>{dashboardData.totalSchemes}</h2>
             <span>8 active schemes</span>
           </div>
 
           <div className="stat-card">
             <p>Channel Partners</p>
-            <h2>40</h2>
+           <h2>{dashboardData.activePartners}</h2>
             <span>35 active partners</span>
           </div>
 
           <div className="stat-card">
             <p>Total Applications</p>
-            <h2>560</h2>
+           <h2>{dashboardData.totalApplications}</h2>
             <span>+8% this month</span>
           </div>
 
@@ -161,34 +164,47 @@ function App() {
       <div className="panel">
         <h2>Beneficiary Overview</h2>
 
-        <div className="chart-placeholder">
-          <div className="bar bar1"></div>
-          <div className="bar bar2"></div>
-          <div className="bar bar3"></div>
-          <div className="bar bar4"></div>
-          <div className="bar bar5"></div>
-          <div className="bar bar6"></div>
-        </div>
+        <ResponsiveContainer width="100%" height={250}>
+  <BarChart data={schemeDemand}>
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis dataKey="month" />
+    <YAxis />
+    <Tooltip />
+    <Bar dataKey="value" fill="#4f46e5" />
+  </BarChart>
+</ResponsiveContainer>
       </div>
 
       <div className="panel">
-        <h2>Scheme Statistics</h2>
+  <h2>Scheme Statistics</h2>
 
-        <div className="scheme-row">
-          <span>Active Schemes</span>
-          <strong>8</strong>
-        </div>
+  <div className="scheme-row">
+    <span>Total Schemes</span>
+    <strong>{governmentSchemes.length}</strong>
+  </div>
 
-        <div className="scheme-row">
-          <span>Pending Schemes</span>
-          <strong>5</strong>
-        </div>
+  <div className="scheme-row">
+    <span>Active Schemes</span>
+    <strong>
+      {
+        governmentSchemes.filter(
+          (scheme) => scheme.status === "Active"
+        ).length
+      }
+    </strong>
+  </div>
 
-        <div className="scheme-row">
-          <span>Completed Schemes</span>
-          <strong>12</strong>
-        </div>
-      </div>
+  <div className="scheme-row">
+    <span>Categories</span>
+    <strong>
+      {
+        [...new Set(governmentSchemes.map(
+          (scheme) => scheme.category
+        ))].length
+      }
+    </strong>
+  </div>
+</div>
 
     </section>
 
@@ -228,54 +244,52 @@ function App() {
         </tr>
       </thead>
 
-      <tbody>
+   <tbody>
+  <tr>
+    <td>BEN001</td>
+    <td>Ravi Kumar</td>
+    <td>35</td>
+    <td>Karnataka</td>
+    <td>PM-KISAN</td>
+    <td>Active</td>
+  </tr>
 
-        <tr>
-          <td>BEN001</td>
-          <td>Rahul Kumar</td>
-          <td>32</td>
-          <td>Karnataka</td>
-          <td>Housing Scheme</td>
-          <td>Active</td>
-        </tr>
+  <tr>
+    <td>BEN002</td>
+    <td>Priya Sharma</td>
+    <td>28</td>
+    <td>Tamil Nadu</td>
+    <td>Ayushman Bharat</td>
+    <td>Active</td>
+  </tr>
 
-        <tr>
-          <td>BEN002</td>
-          <td>Priya Sharma</td>
-          <td>28</td>
-          <td>Tamil Nadu</td>
-          <td>Education Scheme</td>
-          <td>Active</td>
-        </tr>
+  <tr>
+    <td>BEN003</td>
+    <td>Arun Kumar</td>
+    <td>42</td>
+    <td>Kerala</td>
+    <td>PMAY</td>
+    <td>Pending</td>
+  </tr>
 
-        <tr>
-          <td>BEN003</td>
-          <td>Arun Raj</td>
-          <td>45</td>
-          <td>Kerala</td>
-          <td>Health Scheme</td>
-          <td>Pending</td>
-        </tr>
+  <tr>
+    <td>BEN004</td>
+    <td>Meena Devi</td>
+    <td>39</td>
+    <td>Andhra Pradesh</td>
+    <td>Women Welfare</td>
+    <td>Active</td>
+  </tr>
 
-        <tr>
-          <td>BEN004</td>
-          <td>Meena Devi</td>
-          <td>39</td>
-          <td>Andhra Pradesh</td>
-          <td>Women Welfare</td>
-          <td>Active</td>
-        </tr>
-
-        <tr>
-          <td>BEN005</td>
-          <td>Vijay Singh</td>
-          <td>51</td>
-          <td>Maharashtra</td>
-          <td>Employment Scheme</td>
-          <td>Pending</td>
-        </tr>
-
-      </tbody>
+  <tr>
+    <td>BEN005</td>
+    <td>Vijay Singh</td>
+    <td>51</td>
+    <td>Maharashtra</td>
+    <td>Employment Scheme</td>
+    <td>Pending</td>
+  </tr>
+</tbody>
 
     </table>
 
@@ -286,9 +300,38 @@ function App() {
 
     <h2>Schemes</h2>
 
-    <p>Manage and monitor government welfare schemes.</p>
+<p>Manage and monitor government welfare schemes.</p>
 
-    <table className="beneficiary-table">
+<input
+  type="text"
+  placeholder="Search schemes..."
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  style={{
+    padding: "10px",
+    width: "300px",
+    marginBottom: "20px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+  }}
+/>
+<select
+  value={categoryFilter}
+  onChange={(e) => setCategoryFilter(e.target.value)}
+  style={{
+    padding: "10px",
+    marginLeft: "10px",
+    borderRadius: "6px",
+  }}
+>
+  <option value="All">All Categories</option>
+  <option value="Agriculture">Agriculture</option>
+  <option value="Healthcare">Healthcare</option>
+  <option value="Housing">Housing</option>
+  <option value="LPG Support">LPG Support</option>
+  <option value="Street Vendors">Street Vendors</option>
+</select>
+<table className="beneficiary-table">
 
       <thead>
         <tr>
@@ -301,64 +344,29 @@ function App() {
         </tr>
       </thead>
 
-      <tbody>
-
-        <tr>
-          <td>SCH001</td>
-          <td>Housing Scheme</td>
-          <td>Housing</td>
-          <td>320</td>
-          <td>Active</td>
-          <td>
-            <button className="view-button">View</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>SCH002</td>
-          <td>Education Scheme</td>
-          <td>Education</td>
-          <td>210</td>
-          <td>Active</td>
-          <td>
-            <button className="view-button">View</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>SCH003</td>
-          <td>Health Scheme</td>
-          <td>Health</td>
-          <td>180</td>
-          <td>Pending</td>
-          <td>
-            <button className="view-button">View</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>SCH004</td>
-          <td>Women Welfare</td>
-          <td>Women Welfare</td>
-          <td>275</td>
-          <td>Active</td>
-          <td>
-            <button className="view-button">View</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>SCH005</td>
-          <td>Employment Scheme</td>
-          <td>Employment</td>
-          <td>265</td>
-          <td>Completed</td>
-          <td>
-            <button className="view-button">View</button>
-          </td>
-        </tr>
-
-      </tbody>
+    <tbody>
+  {governmentSchemes
+  .filter(
+    (scheme) =>
+      scheme.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()) &&
+      (categoryFilter === "All" ||
+        scheme.category === categoryFilter)
+  )
+  .map((scheme) => (
+    <tr key={scheme.id}>
+      <td>{scheme.id}</td>
+      <td>{scheme.name}</td>
+      <td>{scheme.category}</td>
+      <td>{scheme.beneficiaries}</td>
+      <td>{scheme.status}</td>
+      <td>
+        <button className="view-button">View</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
 
     </table>
 
@@ -447,7 +455,7 @@ function App() {
 
         <div className="analytics-chart">
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={beneficiaryData}>
+            <BarChart data={schemeDemand}>
 
               <CartesianGrid strokeDasharray="3 3" />
 
@@ -457,10 +465,10 @@ function App() {
 
               <Tooltip />
 
-              <Bar
-                dataKey="beneficiaries"
-                fill="#4f46e5"
-              />
+             <Bar
+  dataKey="value"
+  fill="#4f46e5"
+/>
 
             </BarChart>
           </ResponsiveContainer>
@@ -527,6 +535,12 @@ function App() {
         <h2>82%</h2>
         <span>Successful applications</span>
       </div>
+
+      <div className="stat-card">
+  <p>Top Scheme</p>
+  <h2>PM-KISAN</h2>
+  <span>Highest beneficiary reach</span>
+</div>
 
     </section>
   </>
