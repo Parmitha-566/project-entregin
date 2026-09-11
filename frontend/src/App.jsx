@@ -1,3 +1,4 @@
+import IndiaMap from "./components/IndiaMap";
 import { useEffect } from "react";
 import { getDashboardStats } from "./api/adminApi";
 import { useState } from "react";
@@ -549,11 +550,7 @@ const [categoryFilter, setCategoryFilter] = useState("All");
 {activePage === "Map" && (
   <section className="panel">
     <h2>Beneficiary Map</h2>
-
-    <div className="map-placeholder">
-      <h3>Interactive Map</h3>
-      <p>Map integration will be added in the next phase.</p>
-    </div>
+    <IndiaMap />
   </section>
 )}
 
