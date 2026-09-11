@@ -10,109 +10,169 @@ function SchemeDetails() {
     English: {
       section: "Scheme details",
       back: "Back to recommendations",
-      match: "94% match",
+      match: "Potentially suitable",
       title: "Entrepreneurship Support Scheme",
       subtitle:
         "A potential financial assistance option for individuals looking to start or expand a small business.",
       amount: "Up to ₹1,50,000",
       amountLabel: "Potential assistance",
+
       why: "Why this scheme matches",
+      whyTitle: "A potential fit for your requirement",
       whyText:
         "Based on the information you provided, this scheme appears relevant to your business purpose, estimated requirement and profile.",
+
       points: [
         "Suitable for starting a small business",
         "Potential assistance within your requested amount",
         "Designed to support self-employment opportunities",
       ],
+
       keyInfo: "Key information",
       loan: "Potential assistance",
       interest: "Interest",
       interestValue: "Low interest",
       contribution: "Applicant contribution",
       contributionValue: "As applicable",
+
       eligibility: "Eligibility overview",
+      eligibilityTitle: "Check the official requirements",
       eligibilityText:
         "Eligibility depends on factors such as income, applicant category, business activity, location and the official scheme guidelines.",
+
       important: "Important",
       disclaimer:
         "This recommendation is a demonstration based on mock data. Final eligibility, assistance amount and approval are determined by the official authority.",
+
       partner: "Find the right channel partner",
       partnerText:
         "See which authorized partner may be most suitable based on scheme compatibility, location and availability.",
+
       calculator: "Calculate EMI",
+      calculatorLabel: "Financial planning",
+      calculatorText:
+        "Estimate your potential monthly repayment.",
+
       documents: "Check documents",
+      documentsLabel: "Application readiness",
+      documentsText:
+        "Review the documents you may need.",
+
+      partnerLabel: "Partner matching",
+      government: "Government assistance",
+      next: "Next",
     },
 
     Hindi: {
       section: "योजना विवरण",
       back: "अनुशंसाओं पर वापस जाएं",
-      match: "94% मिलान",
+      match: "संभावित रूप से उपयुक्त",
       title: "उद्यमिता सहायता योजना",
       subtitle:
         "छोटा व्यवसाय शुरू करने या बढ़ाने वाले लोगों के लिए संभावित वित्तीय सहायता विकल्प।",
       amount: "₹1,50,000 तक",
       amountLabel: "संभावित सहायता",
+
       why: "यह योजना क्यों उपयुक्त है",
+      whyTitle: "आपकी आवश्यकता के लिए संभावित रूप से उपयुक्त",
       whyText:
         "आपके द्वारा दी गई जानकारी के आधार पर यह योजना आपके व्यवसाय के उद्देश्य, अनुमानित आवश्यकता और प्रोफ़ाइल के लिए उपयुक्त दिखाई देती है।",
+
       points: [
         "छोटा व्यवसाय शुरू करने के लिए उपयुक्त",
         "आपकी अनुरोधित राशि के भीतर संभावित सहायता",
         "स्वरोजगार के अवसरों को समर्थन देने के लिए बनाई गई",
       ],
+
       keyInfo: "मुख्य जानकारी",
       loan: "संभावित सहायता",
       interest: "ब्याज",
       interestValue: "कम ब्याज",
       contribution: "आवेदक का योगदान",
       contributionValue: "लागू नियमों के अनुसार",
+
       eligibility: "पात्रता का अवलोकन",
+      eligibilityTitle: "आधिकारिक आवश्यकताओं की जांच करें",
       eligibilityText:
         "पात्रता आय, आवेदक की श्रेणी, व्यवसाय गतिविधि, स्थान और आधिकारिक योजना दिशानिर्देशों जैसे कारकों पर निर्भर करती है।",
+
       important: "महत्वपूर्ण",
       disclaimer:
         "यह अनुशंसा मॉक डेटा पर आधारित प्रदर्शन के लिए है। अंतिम पात्रता, सहायता राशि और स्वीकृति संबंधित आधिकारिक प्राधिकरण द्वारा निर्धारित की जाती है।",
+
       partner: "सही चैनल पार्टनर खोजें",
       partnerText:
         "योजना की अनुकूलता, स्थान और उपलब्धता के आधार पर सबसे उपयुक्त अधिकृत पार्टनर देखें।",
+
       calculator: "EMI की गणना करें",
+      calculatorLabel: "वित्तीय योजना",
+      calculatorText:
+        "अपनी संभावित मासिक भुगतान राशि का अनुमान लगाएं।",
+
       documents: "दस्तावेज़ जांचें",
+      documentsLabel: "आवेदन की तैयारी",
+      documentsText:
+        "आवश्यक दस्तावेज़ों की समीक्षा करें।",
+
+      partnerLabel: "पार्टनर मिलान",
+      government: "सरकारी सहायता",
+      next: "अगला",
     },
 
     Kannada: {
       section: "ಯೋಜನೆ ವಿವರಗಳು",
       back: "ಶಿಫಾರಸುಗಳಿಗೆ ಹಿಂತಿರುಗಿ",
-      match: "94% ಹೊಂದಾಣಿಕೆ",
+      match: "ಸಂಭಾವ್ಯವಾಗಿ ಸೂಕ್ತ",
       title: "ಉದ್ಯಮಿತ್ವ ಬೆಂಬಲ ಯೋಜನೆ",
       subtitle:
         "ಸಣ್ಣ ವ್ಯವಹಾರವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಅಥವಾ ವಿಸ್ತರಿಸಲು ಬಯಸುವವರಿಗೆ ಸಂಭಾವ್ಯ ಹಣಕಾಸು ಸಹಾಯದ ಆಯ್ಕೆ.",
       amount: "₹1,50,000 ವರೆಗೆ",
       amountLabel: "ಸಂಭಾವ್ಯ ಸಹಾಯ",
+
       why: "ಈ ಯೋಜನೆ ಏಕೆ ಹೊಂದಿಕೆಯಾಗುತ್ತದೆ",
+      whyTitle: "ನಿಮ್ಮ ಅಗತ್ಯಕ್ಕೆ ಸಂಭಾವ್ಯವಾಗಿ ಸೂಕ್ತ",
       whyText:
         "ನೀವು ನೀಡಿದ ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ, ಈ ಯೋಜನೆಯು ನಿಮ್ಮ ವ್ಯವಹಾರದ ಉದ್ದೇಶ, ಅಂದಾಜು ಅಗತ್ಯ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗೆ ಸೂಕ್ತವಾಗಿ ಕಾಣುತ್ತದೆ.",
+
       points: [
         "ಸಣ್ಣ ವ್ಯವಹಾರ ಪ್ರಾರಂಭಿಸಲು ಸೂಕ್ತ",
         "ನೀವು ಕೇಳಿದ ಮೊತ್ತದೊಳಗೆ ಸಂಭಾವ್ಯ ಸಹಾಯ",
         "ಸ್ವಯಂ ಉದ್ಯೋಗದ ಅವಕಾಶಗಳನ್ನು ಬೆಂಬಲಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ",
       ],
+
       keyInfo: "ಮುಖ್ಯ ಮಾಹಿತಿ",
       loan: "ಸಂಭಾವ್ಯ ಸಹಾಯ",
       interest: "ಬಡ್ಡಿ",
       interestValue: "ಕಡಿಮೆ ಬಡ್ಡಿ",
       contribution: "ಅರ್ಜಿದಾರರ ಕೊಡುಗೆ",
       contributionValue: "ಅನ್ವಯಿಸುವ ನಿಯಮಗಳಂತೆ",
+
       eligibility: "ಅರ್ಹತೆಯ ಅವಲೋಕನ",
+      eligibilityTitle: "ಅಧಿಕೃತ ಅವಶ್ಯಕತೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
       eligibilityText:
         "ಅರ್ಹತೆಯು ಆದಾಯ, ಅರ್ಜಿದಾರರ ವರ್ಗ, ವ್ಯವಹಾರ ಚಟುವಟಿಕೆ, ಸ್ಥಳ ಮತ್ತು ಅಧಿಕೃತ ಯೋಜನೆಯ ಮಾರ್ಗಸೂಚಿಗಳಂತಹ ಅಂಶಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುತ್ತದೆ.",
+
       important: "ಮುಖ್ಯ",
       disclaimer:
         "ಈ ಶಿಫಾರಸು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾಕ್ ಡೇಟಾವನ್ನು ಆಧರಿಸಿದೆ. ಅಂತಿಮ ಅರ್ಹತೆ, ಸಹಾಯದ ಮೊತ್ತ ಮತ್ತು ಅನುಮೋದನೆಯನ್ನು ಅಧಿಕೃತ ಸಂಸ್ಥೆಯೇ ನಿರ್ಧರಿಸುತ್ತದೆ.",
+
       partner: "ಸರಿಯಾದ ಚಾನೆಲ್ ಪಾಲುದಾರರನ್ನು ಹುಡುಕಿ",
       partnerText:
         "ಯೋಜನೆಯ ಹೊಂದಾಣಿಕೆ, ಸ್ಥಳ ಮತ್ತು ಲಭ್ಯತೆಯ ಆಧಾರದ ಮೇಲೆ ಸೂಕ್ತ ಅಧಿಕೃತ ಪಾಲುದಾರರನ್ನು ನೋಡಿ.",
+
       calculator: "EMI ಲೆಕ್ಕ ಹಾಕಿ",
+      calculatorLabel: "ಹಣಕಾಸು ಯೋಜನೆ",
+      calculatorText:
+        "ನಿಮ್ಮ ಸಂಭಾವ್ಯ ಮಾಸಿಕ ಮರುಪಾವತಿಯನ್ನು ಅಂದಾಜಿಸಿ.",
+
       documents: "ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+      documentsLabel: "ಅರ್ಜಿಯ ಸಿದ್ಧತೆ",
+      documentsText:
+        "ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+
+      partnerLabel: "ಪಾಲುದಾರ ಹೊಂದಾಣಿಕೆ",
+      government: "ಸರ್ಕಾರಿ ಸಹಾಯ",
+      next: "ಮುಂದೆ",
     },
   };
 
@@ -175,7 +235,7 @@ function SchemeDetails() {
                   </span>
 
                   <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-blue-100">
-                    Government assistance
+                    {text.government}
                   </span>
 
                 </div>
@@ -222,7 +282,7 @@ function SchemeDetails() {
               </p>
 
               <h3 className="mt-3 text-2xl font-extrabold">
-                A potential fit for your requirement
+                {text.whyTitle}
               </h3>
 
               <p className="mt-4 text-sm leading-7 text-slate-500">
@@ -255,25 +315,25 @@ function SchemeDetails() {
             </div>
 
 
-            {/* MATCH SCORE */}
+            {/* SUITABILITY */}
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
 
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
-                Match confidence
+                {text.match}
               </p>
 
               <div className="mt-7 flex items-center justify-center">
 
-                <div className="flex h-44 w-44 items-center justify-center rounded-full border-[12px] border-blue-100">
+                <div className="flex h-44 w-44 items-center justify-center rounded-full border-[12px] border-emerald-100">
 
                   <div className="text-center">
 
-                    <p className="text-5xl font-extrabold text-[#061a3b]">
-                      94%
+                    <p className="text-lg font-extrabold text-[#061a3b]">
+                      {text.match}
                     </p>
 
-                    <p className="mt-1 text-xs font-semibold text-slate-400">
-                      potential match
+                    <p className="mt-2 text-xs font-semibold text-slate-400">
+                      Based on your requirements
                     </p>
 
                   </div>
@@ -356,7 +416,7 @@ function SchemeDetails() {
             </p>
 
             <h3 className="mt-3 text-2xl font-extrabold">
-              Check the official requirements
+              {text.eligibilityTitle}
             </h3>
 
             <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-500">
@@ -374,7 +434,7 @@ function SchemeDetails() {
               <div className="max-w-2xl">
 
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
-                  Partner matching
+                  {text.partnerLabel}
                 </p>
 
                 <h3 className="mt-3 text-2xl font-extrabold md:text-3xl">
@@ -403,12 +463,14 @@ function SchemeDetails() {
           {/* OTHER ACTIONS */}
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
 
+            {/* CALCULATOR */}
             <button
-              onClick={() => navigate("/partners")}
+              onClick={() => navigate("/calculator")}
               className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
             >
+
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-700">
-                Financial planning
+                {text.calculatorLabel}
               </p>
 
               <p className="mt-2 text-lg font-extrabold">
@@ -416,17 +478,20 @@ function SchemeDetails() {
               </p>
 
               <p className="mt-1 text-sm text-slate-500">
-                Estimate your potential monthly repayment.
+                {text.calculatorText}
               </p>
+
             </button>
 
 
+            {/* DOCUMENTS */}
             <button
               onClick={() => navigate("/documents")}
               className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
             >
+
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-700">
-                Application readiness
+                {text.documentsLabel}
               </p>
 
               <p className="mt-2 text-lg font-extrabold">
@@ -434,8 +499,9 @@ function SchemeDetails() {
               </p>
 
               <p className="mt-1 text-sm text-slate-500">
-                Review the documents you may need.
+                {text.documentsText}
               </p>
+
             </button>
 
           </div>
@@ -445,7 +511,8 @@ function SchemeDetails() {
           <div className="mt-7 rounded-2xl border border-amber-100 bg-amber-50 p-5">
 
             <p className="text-sm leading-6 text-amber-800">
-              <strong>{text.important}:</strong> {text.disclaimer}
+              <strong>{text.important}:</strong>{" "}
+              {text.disclaimer}
             </p>
 
           </div>
